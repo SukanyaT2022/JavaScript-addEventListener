@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    #box1 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px auto;
+    }
+
+    #box2 {
+        width: 250px;
+        height: 250px;
+        background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .container {
+        border: 2px solid red;
+        width: 500px;
+        height: 500px;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="box1" onclick="changeColors()">BoxOne</div>
+        <div id="box2">BoxTwo</div>
+    </div>
+</body>
+
+<script>
+    //option1-normal function
+    function changeColors() {
+        var box1 = document.getElementById("box1").style.background = "purple";
+
+    }
+    //option2-eventlistener
+    var box2 = document.getElementById("box2");
+    box2.addEventListener("mouseenter", function () {
+        box2.style.background = "blue";
+    });
+</script>
+
+</html>
